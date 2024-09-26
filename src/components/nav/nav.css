@@ -1,0 +1,67 @@
+nav {
+    position: fixed;
+    left: 130px; /* Ajusta para que la mitad del círculo esté fuera de la pantalla */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+nav .nav-container {
+    position: absolute;
+    left: 100%; /* Ajusta para que el menú aparezca a la derecha del círculo */
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+nav .nav-container.visible {
+    opacity: 1;
+}
+
+nav a {
+    background-color: transparent;
+    padding: .9rem;
+    display: flex;
+    border-radius: 50%;
+    color: var(--color-light);
+    font-size: 1.1rem;
+    position: absolute;
+}
+
+nav a:nth-child(1) { transform: rotate(0deg) translate(150px) rotate(0deg); }
+nav a:nth-child(2) { transform: rotate(36deg) translate(150px) rotate(-36deg); }
+nav a:nth-child(3) { transform: rotate(72deg) translate(150px) rotate(-72deg); }
+nav a:nth-child(4) { transform: rotate(108deg) translate(150px) rotate(-108deg); }
+nav a:nth-child(5) { transform: rotate(144deg) translate(150px) rotate(-144deg); }
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+nav a.active {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+}
+
+.circle-button {
+
+    z-index: 2;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: .8rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(15px);
+    bottom: 1rem;
+}
