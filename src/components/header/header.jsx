@@ -1,7 +1,8 @@
-import HeaderSocial from "./headerSocial";
 import Me from "../../assets/girl.png";
+import { BsLinkedin } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+import { FaFigma } from "react-icons/fa";
 import React from "react";
-import Cta from "./cta";
 import "./header.css";
 
 function Header() {
@@ -13,17 +14,33 @@ function Header() {
           <h1>OMEGA</h1>
           <h5 className="text-light">Fullstack Developer</h5>
         </section>
-
-        <Cta />
-        <HeaderSocial />
-
         <div className="me">
           <img src={Me} alt="me" />
         </div>
-
-        <a href="#contact" className="scroll_down">
-          Scroll Down
-        </a>
+        <div className="cta">
+          <a
+            href="/resume_url"
+            download={"resume"}
+            target="_blank"
+            className="btn"
+          >
+            Download CV
+          </a>
+          <a href="#contact" className="btn btn-primary">
+            Let's Talk
+          </a>
+        </div>
+        <div className="header_social">
+          <a href="http://linkedin.com" target="_blank" rel="noreferrer">
+            <BsLinkedin />
+          </a>
+          <a href="http://github.com" target="_blank" rel="noreferrer">
+            <BsGithub />
+          </a>
+          <a href="http://figma.com" target="_blank" rel="noreferrer">
+            <FaFigma />
+          </a>
+        </div>
       </div>
     </header>
   );

@@ -13,6 +13,9 @@ import React, { useState, useEffect } from "react";
 const App = () => {
   const [section, setSection] = useState('')
   const [load, upadateLoad] = useState(true);
+  useEffect(() => {
+      setSection('home');
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -27,7 +30,7 @@ const App = () => {
       <div className="App" id={load ? "no-scroll" : "scroll"}>
       <Nav getSection={setSection}/>
       {
-        section === 'home' ? <><Header /><Footer /></>:
+        section === 'home' ? <><Header /></>:
         section === 'about' ? <><About /><Footer /></>:
         section === 'experience' ? <><Experience /><Footer /></>:
         section === 'services' ? <><Service /><Footer /></>:

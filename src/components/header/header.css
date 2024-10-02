@@ -1,18 +1,32 @@
 header{
     height: 100vh;
-    padding-top: 7rem;
-    overflow: hidden;
+    padding-top: 15vh;
+    position: relative;
+    display:grid;
+    grid-template-areas: 
+    "section_me"
+    "photo_me"
+    "cta"
+    "header_social";
 }
 
 .header_container{
-    text-align: center;
     position: relative;
-    height: 100%;
+    display: grid;
+    grid-template: 
+    "section_me photo_me" auto
+    "cta photo_me" auto
+    "header_social photo_me" auto/
+    70% 30%; /* rows y arriba son las columnas*/
+    & section{
+        grid-area: section_me;
+    }
 }
 
 
 /* =============== CTA ========== */
 .cta{
+    grid-area: cta;
     margin-top: 2.5rem;
     display: flex;
     gap: 1.2rem;
@@ -21,6 +35,7 @@ header{
 
 /* ============ HEADER SOCIALS ============== */
 .header_social{
+    grid-area: header_social;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,6 +55,7 @@ header{
 
 /* ============= ME ============== */
 .header_container .me{
+    grid-area: photo_me;
     /* background-color: var(--color-primary); */
     background-image: linear-gradient(var(--color-primary), var(--color-bg));
     width: 22rem;

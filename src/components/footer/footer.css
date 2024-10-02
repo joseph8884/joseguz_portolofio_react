@@ -17,14 +17,6 @@ footer a{
     margin-bottom: 2rem;
     display: inline-block;
 }
-.permalinks{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 0 1rem;
-    margin: 0 auto 3rem;
-}
 
 .footer_socials{
     display: flex;
