@@ -7,25 +7,44 @@ import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import About from "./components/about/about";
 import Nav from "./components/nav/nav";
-import React from "react";
+import Preloader from "./components/pre";
+import React, { useState, useEffect } from "react";
 
 const App = () => {
+  const [section, setSection] = useState('')
+  const [load, upadateLoad] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      upadateLoad(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
-      <Header />
-      <Nav />
+      <Preloader load={load} />
+      <div className="App" id={load ? "no-scroll" : "scroll"}>
+      <Nav getSection={setSection}/>
       {
+        section === 'home' ? <><Header /><Footer /></>:
+        section === 'about' ? <><About /><Footer /></>:
+        section === 'experience' ? <><Experience /><Footer /></>:
+        section === 'services' ? <><Service /><Footer /></>:
+        section === 'portfolio' ? <><Portfolio /><Footer /></> :
+        section === 'testimonials' ? <><Testimonials /><Footer /></>:
+        section === 'contact' ? <><Contact /><Footer /></> : null
         /**
          * <About />
-      <Experience />
-      <Service />
-      <Portfolio />
-      <Testimonials />
-      <Contact />
-      <Footer />
+        <Experience />
+        <Service />
+        <Portfolio />
+        <Testimonials />
+        <Contact />
+        <Footer />
          */
       }
-      
+      </div>
     </>
   );
 };

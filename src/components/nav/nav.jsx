@@ -7,54 +7,47 @@ import { useState } from "react";
 import React from "react";
 import "./nav.css";
 
-function Nav() {
+function Nav({ getSection }) {
   const [activeNav, setActiveNav] = useState("/#");
-  const [isVisible, setIsVisible] = useState(false);
 
-  const toggleVisibility = () => setIsVisible(!isVisible);
 
   return (
     <nav>
-      <div className="circle-button" onClick={toggleVisibility}>
-        |||
-      </div>
-      <div className={`nav-container ${isVisible ? 'visible' : ''}`}>
         <a
           href="/#"
-          onClick={() => setActiveNav("/#")}
+          onClick={() => {setActiveNav("/#") ; getSection('home')}}
           className={activeNav === "/#" ? "active" : ""}
         >
           <AiOutlineHome />
         </a>
         <a
           href="#about"
-          onClick={() => setActiveNav("#about")}
+          onClick={() => {setActiveNav("#about"); getSection('about')}}
           className={activeNav === "#about" ? "active" : ""}
         >
           <BiUser />
         </a>
         <a
           href="#experience"
-          onClick={() => setActiveNav("#experience")}
+          onClick={() => {setActiveNav("#experience"); getSection('experience')}}
           className={activeNav === "#experience" ? "active" : ""}
         >
           <BiBook />
         </a>
         <a
           href="#services"
-          onClick={() => setActiveNav("#services")}
+          onClick={() =>{ setActiveNav("#services"); getSection('services')}}
           className={activeNav === "#services" ? "active" : ""}
         >
           <RiServiceLine />
         </a>
         <a
           href="#contact"
-          onClick={() => setActiveNav("#contact")}
+          onClick={() => {setActiveNav("#contact"); getSection('contact')}}
           className={activeNav === "#contact" ? "active" : ""}
         >
           <BiMessageDetail />
         </a>
-      </div>
     </nav>
   );
 }
