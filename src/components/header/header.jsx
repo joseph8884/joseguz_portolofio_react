@@ -1,4 +1,4 @@
-import Me from "../../assets/girl.png";
+import Me from "../../assets/profile_photo_jose.jpg";
 import { BsLinkedin } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 import { FaFigma } from "react-icons/fa";
@@ -11,7 +11,7 @@ function Header() {
       <div className="container header_container">
         <section>
           <h5>Hello I'm</h5>
-          <h1>OMEGA</h1>
+          <h1>JOSE GUZMAN</h1>
           <h5 className="text-light">Fullstack Developer</h5>
         </section>
         <div className="me">
