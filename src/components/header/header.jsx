@@ -14,8 +14,21 @@ function Header() {
           <h1>JOSE GUZMAN</h1>
           <h5 className="text-light">Fullstack Developer</h5>
         </section>
-        <div className="me">
-          <img src={Me} alt="me" />
+        <div className="cartas-container">
+          <div className="flip-card">
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <div className="me">
+                  <img src={Me} alt="me" />
+                </div>
+              </div>
+              <div className="flip-card-back">
+                <div className="me">
+                    <p>Back</p>
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="cta">
           <a
