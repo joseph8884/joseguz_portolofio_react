@@ -2,34 +2,31 @@ import Me from "../../assets/profile_photo_jose.jpg";
 import { BsLinkedin } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 import { FaFigma } from "react-icons/fa";
+import Type from "./Type";
 import React from "react";
 import "./header.css";
+import Spline from '@splinetool/react-spline';
+
 
 function Header() {
   return (
+  
     <header id="home">
-      <div className="container header_container">
-        <section>
-          <h5>Hello I'm</h5>
+      
+      <div className="header_container">
+        <section className="whoami">
+          <h5>Hello I'm<span className="wave" role="img" aria-labelledby="wave">👋🏻</span></h5>
           <h1>JOSE GUZMAN</h1>
-          <h5 className="text-light">Fullstack Developer</h5>
+          <Type />
         </section>
-        <div className="cartas-container">
-          <div className="flip-card">
-            <div className="flip-card-inner">
-              <div className="flip-card-front">
+        
                 <div className="me">
-                  <img src={Me} alt="me" />
+                <Spline
+        scene="https://prod.spline.design/eC4-Y8Dgukm8upuI/scene.splinecode" 
+      />
                 </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="me">
-                    <p>Back</p>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
+        
         <div className="cta">
           <a
             href="/resume_url"
@@ -54,6 +51,7 @@ function Header() {
             <FaFigma />
           </a>
         </div>
+        
       </div>
     </header>
   );

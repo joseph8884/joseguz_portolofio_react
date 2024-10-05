@@ -1,6 +1,5 @@
 header{
     height: 100vh;
-    padding-top: 15vh;
     position: relative;
     display:grid;
     grid-template-areas: 
@@ -13,78 +12,81 @@ header{
 .header_container{
     position: relative;
     display: grid;
+    width: 100%;
+    height: 100vh;
     grid-template: 
     "section_me photo_me" auto
-    "cta photo_me" auto
+    "cta photo_me" 50px
     "header_social photo_me" auto/
-    70% 30%; /* rows y arriba son las columnas*/
+    40% 60%; /* rows y arriba son las columnas*/
     & section{
         grid-area: section_me;
     }
 }
+/*================= whoami ================ */
+.whoami{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    & h1{
+        font-size: 3.5rem;
+        color: var(--color-primary);
+    }
+    & h5{
+        font-size: 2rem;
+        color: var( --color-light);
+    }
+    & p{
+        font-size: 1.2rem;
+        color: var(--color-primary);
+    }
+}
+
 
 
 
 /* =============== CTA ========== */
 .cta{
     grid-area: cta;
-    margin-top: 2.5rem;
     display: flex;
     gap: 1.2rem;
     justify-content: center;
+    & a{
+        height: 50px;
+    }
 }
 
 /* ============ HEADER SOCIALS ============== */
 .header_social{
     grid-area: header_social;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     gap: .8rem;
-    position: absolute;
-    left: 0;
-    bottom: 15rem;
+    margin-top:10%;
+    & a{
+        color: var(--color-primary);
+        font-size: 1.5rem;
+        height: 100%;
+    }
 }
-
-.header_social::after{
-    content: "";
-    width: 1px;
-    height: 2rem;
-    background-color: var(--color-primary);
-}
-
 
 /* ============= ME ============== */
 .header_container .me{
     grid-area: photo_me;
     /* background-color: var(--color-primary); */
-    background-image: linear-gradient(var(--color-primary), var(--color-bg));
-    width: 25rem;
-    height: 25rem;
+    /*background-image: linear-gradient(var(--color-primary), var(--color-bg));*/
+    width: 100%;
+    height: 100%;
     position: absolute;
-    margin-top: 4rem;
     overflow: hidden;
-    border-radius: 15rem 15rem 15rem 15rem ;
+    /*border-radius: 15rem 15rem 15rem 15rem ;*/
 
-    & img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 15rem 15rem 15rem 15rem ;      
-        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
-    }
-    animation: float 4s ease-in-out infinite;
-}
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-2rem) scale(1.05);
-    }
 }
 
 /* ============= FLIP CARD STYLES ============== */
+/*
 .cartas-container {
   perspective: 1000px;
 }
@@ -115,31 +117,39 @@ header{
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
-
-
-/* ============= SCROLL DOWN ============== */
-.scroll_down{
-    position: absolute;
-    right: -2.3rem;
-    bottom: 15rem;
-    transform: rotate(90deg);
-    font-weight: 300;
-    font-size: .9rem;
-}
-
-/* ================ MEDIA QUERIES (MEDIUM DEVICES) ============= */
-@media screen and (max-width:1024px) {
-    header{
-        height: 88vh;
+  */
+/* ================ wave hand ============= */
+.wave {
+    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.1s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite; /* Never stop waving :) */
+    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+    0% {
+      transform: rotate(0deg);
     }
-}
-
-/* ================ MEDIA QUERIES (SMALL DEVICES) ============= */
-@media screen and (max-width:600px) {
-    header{
-        height: 100vh;
+    10% {
+      transform: rotate(14deg);
+    } /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+      transform: rotate(-8deg);
     }
-    .header_social, .scroll_down{
-        display: none;
+    30% {
+      transform: rotate(14deg);
     }
-} 
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    } /* Reset for the last half to pause */
+    100% {
+      transform: rotate(0deg);
+    }
+  }
