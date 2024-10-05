@@ -40,7 +40,7 @@ function Header() {
           </a>
         </div>
         <div className="header_social">
-          <a href="www.linkedin.com/in/héctor-jose-guzmán-montaño-2093a2238" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/héctor-jose-guzmán-montaño-2093a2238" target="_blank" rel="noreferrer">
             <BsLinkedin />
           </a>
           <a href="https://github.com/joseph8884" target="_blank" rel="noreferrer">
