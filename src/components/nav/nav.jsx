@@ -3,51 +3,28 @@ import { AiOutlineHome } from "react-icons/ai";
 import { RiServiceLine } from "react-icons/ri";
 import { BiBook } from "react-icons/bi";
 import { BiUser } from "react-icons/bi";
-import { useState } from "react";
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./nav.css";
 
-function Nav({ getSection }) {
-  const [activeNav, setActiveNav] = useState("/#");
-
-
+function Nav() {
   return (
     <nav>
-        <a
-          href="/#"
-          onClick={() => {setActiveNav("/#") ; getSection('home')}}
-          className={activeNav === "/#" ? "active" : ""}
-        >
-          <AiOutlineHome />
-        </a>
-        <a
-          href="#about"
-          onClick={() => {setActiveNav("#about"); getSection('about')}}
-          className={activeNav === "#about" ? "active" : ""}
-        >
-          <BiUser />
-        </a>
-        <a
-          href="#experience"
-          onClick={() => {setActiveNav("#experience"); getSection('experience')}}
-          className={activeNav === "#experience" ? "active" : ""}
-        >
-          <BiBook />
-        </a>
-        <a
-          href="#services"
-          onClick={() =>{ setActiveNav("#services"); getSection('services')}}
-          className={activeNav === "#services" ? "active" : ""}
-        >
-          <RiServiceLine />
-        </a>
-        <a
-          href="#contact"
-          onClick={() => {setActiveNav("#contact"); getSection('contact')}}
-          className={activeNav === "#contact" ? "active" : ""}
-        >
-          <BiMessageDetail />
-        </a>
+      <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+        <AiOutlineHome />
+      </NavLink>
+      <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}>
+        <BiUser />
+      </NavLink>
+      <NavLink to="/experience" className={({ isActive }) => (isActive ? "active" : "")}>
+        <BiBook />
+      </NavLink>
+      <NavLink to="/services" className={({ isActive }) => (isActive ? "active" : "")}>
+        <RiServiceLine />
+      </NavLink>
+      <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>
+        <BiMessageDetail />
+      </NavLink>
     </nav>
   );
 }

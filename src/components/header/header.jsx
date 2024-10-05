@@ -35,9 +35,10 @@ function Header() {
           >
             Download CV
           </a>
-          <a href="#contact" className="btn btn-primary">
+          <a href="/contact" className="btn btn-primary">
             Let's Talk
           </a>
+          
         </div>
         <div className="header_social">
           <a href="https://www.linkedin.com/in/héctor-jose-guzmán-montaño-2093a2238" target="_blank" rel="noreferrer">

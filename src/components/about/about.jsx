@@ -1,7 +1,7 @@
 import { VscFolderLibrary } from "react-icons/vsc";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
-import ME from "../../assets/f5.jpg";
+import ME from "../../assets/profile_photo_jose.jpg";
 import React from "react";
 import "./about.css";
 
