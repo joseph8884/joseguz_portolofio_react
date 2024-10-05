@@ -1,4 +1,3 @@
-import Me from "../../assets/profile_photo_jose.jpg";
 import { BsLinkedin } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 import { FaFigma } from "react-icons/fa";
@@ -41,10 +40,10 @@ function Header() {
           </a>
         </div>
         <div className="header_social">
-          <a href="http://linkedin.com" target="_blank" rel="noreferrer">
+          <a href="www.linkedin.com/in/héctor-jose-guzmán-montaño-2093a2238" target="_blank" rel="noreferrer">
             <BsLinkedin />
           </a>
-          <a href="http://github.com" target="_blank" rel="noreferrer">
+          <a href="https://github.com/joseph8884" target="_blank" rel="noreferrer">
             <BsGithub />
           </a>
           <a href="http://figma.com" target="_blank" rel="noreferrer">
