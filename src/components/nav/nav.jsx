@@ -1,7 +1,7 @@
 import { BiMessageDetail } from "react-icons/bi";
 import { AiOutlineHome } from "react-icons/ai";
 import { RiServiceLine } from "react-icons/ri";
-import { BiBook } from "react-icons/bi";
+import { BiBriefcase } from "react-icons/bi";
 import { BiUser } from "react-icons/bi";
 import React from "react";
 import { NavLink } from "react-router-dom";
@@ -16,8 +16,8 @@ function Nav() {
       <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}>
         <BiUser />
       </NavLink>
-      <NavLink to="/experience" className={({ isActive }) => (isActive ? "active" : "")}>
-        <BiBook />
+      <NavLink to="/portfolio" className={({ isActive }) => (isActive ? "active" : "")}>
+        <BiBriefcase />
       </NavLink>
       <NavLink to="/services" className={({ isActive }) => (isActive ? "active" : "")}>
         <RiServiceLine />

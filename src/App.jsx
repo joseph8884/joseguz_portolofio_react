@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Testimonials from "./components/testimonials/testimonials";
-import Experience from "./components/experience/experience";
+import Experience from "./components/portfolio/experience/experience";
 import Portfolio from "./components/portfolio/portfolio";
 import Service from "./components/service/service";
 import Contact from "./components/contact/contact";
@@ -10,6 +10,7 @@ import Footer from "./components/footer/footer";
 import About from "./components/about/about";
 import Nav from "./components/nav/nav";
 import Preloader from "./components/pre";
+import "tailwindcss/tailwind.css";
 
 const App = () => {
   const [load, updateLoad] = useState(true);
