@@ -19,9 +19,6 @@ function Nav() {
       <NavLink to="/portfolio" className={({ isActive }) => (isActive ? "active" : "")}>
         <BiBriefcase />
       </NavLink>
-      <NavLink to="/services" className={({ isActive }) => (isActive ? "active" : "")}>
-        <RiServiceLine />
-      </NavLink>
       <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>
         <BiMessageDetail />
       </NavLink>
