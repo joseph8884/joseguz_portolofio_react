@@ -46,6 +46,7 @@ function About() {
           </a>
         </div>
       </div>
+      Poner achivments
     </section>
   );
 }

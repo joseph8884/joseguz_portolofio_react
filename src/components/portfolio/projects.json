@@ -1,0 +1,70 @@
+
+[
+    {
+      "slug": "Android app Conex",
+      "coverImg": "/Conex/thumb_pry8_conexapp.png",
+      "name": "App Conex",
+      "img": "/Conex/large_pry_concex.png",
+      "type": "Mobile andrioid Application",
+      "description":
+        "Conex es una aplicación Android que demuestra nuestras habilidades en desarrollo móvil. Integra funciones clave como Bluetooth, cámara, geolocalización y mensajería, además de un sistema de notificaciones. Este proyecto muestra nuestra capacidad para crear apps móviles completas y funcionales.",
+      "technologies": ["Kotlin", "Firebase", "Google Maps API", "Google Cloud Platform", "Android Studio"],
+      "role": "Developer/Lead",
+      "year": "Marzo 2024 - Mayo 2024"
+    },
+    {
+        "slug": "Profesores extranjeros - Web Application",
+        "coverImg": "/Profesores/thumb_profesores.png",
+        "name": "Profesores Extranjeros - Aplicación Web de Control de Horas",
+        "type": "Web Application",
+        "description":
+          "A web application to manage working hours for foreign teachers.",
+        "technologies": ["Django", "React", "PostgreSQL"],
+        "role": "Developer",
+        "year": 2024
+      },
+    {
+      "slug": "Webelopers",
+      "coverImg": "/Webelopers/thumb_webelopers.png",
+      "name": "Own Business Webelopers",
+      "type": "Web Development",
+      "description":
+        "Development and maintenance of a web platform for [specific business purpose].",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "role": "Founder/Developer",
+      "year": 2023
+    },
+    {
+      "slug": "Sabana Herons - RoboCup",
+      "coverImg": "/Robocup/thumb_robocup.png",
+      "name": "RoboCup Code of Participation",
+      "type": "Programming Challenge",
+      "description":
+        "Code implementation and participation guidelines for RoboCup competition.",
+      "technologies": ["Python", "ROS", "AI"],
+      "role": "Team Member",
+      "year": 2024
+    },
+    {
+      "slug": "Event Driven Architecture with Microservices",
+      "coverImg": "/EventDriven/thumb.png",
+      "name": "Arquitectura Event Driven con Microservicios",
+      "type": "Software Architecture",
+      "description":
+        "Development of event-driven architecture using microservices for scalable applications.",
+      "technologies": ["Kafka", "Docker", "Java"],
+      "role": "Architect/Developer",
+      "year": 2024
+    },
+    {
+      "slug": "ChatBot challenge",
+      "coverImg": "/ChatBot/thumb_ChatBot.png",
+      "name": "Profesores Extranjeros - Aplicación Web de Control de Horas",
+      "type": "Web Application",
+      "description":
+        "A web application to manage working hours for foreign teachers.",
+      "technologies": ["Django", "React", "PostgreSQL"],
+      "role": "Developer",
+      "year": 2024
+    }
+]

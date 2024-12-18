@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Experience from "./components/portfolio/experience/experience";
 import Portfolio from "./components/portfolio/portfolio";
 import Contact from "./components/contact/contact";
 import Header from "./components/header/header";
@@ -28,7 +27,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<><Header /></>} />
           <Route path="/about" element={<><About /><Footer /></>} />
-          <Route path="/experience" element={<><Experience /><Footer /></>} />
           <Route path="/portfolio" element={<><Portfolio /><Footer /></>} />
           <Route path="/contact" element={<><Contact /><Footer /></>} />
         </Routes>

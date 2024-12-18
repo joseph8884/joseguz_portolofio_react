@@ -1,54 +1,18 @@
 import Img1 from "../../assets/b1.jpg";
+  
 import React from "react";
 import "./portfolio.css";
-import Experience from "./experience/experience";
 import Tilt from "react-parallax-tilt";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
 import Techstack from "./Techstack.js";
 import { Container } from "react-bootstrap";
 import Toolstack from "./Toolstack.js";
-import Github from "./GithubChart.js"
-const projects = [
-  {
-    slug: "moverii",
-    coverImg: Img1,
-  },
-  {
-    slug: "Next.js-Blog-App",
-    coverImg: Img1,
-  },
-  {
-    slug: "Financial-Dashboard",
-    coverImg: Img1,
-  },
-  {
-    slug: "Creative-Agency-LandingPage",
-    coverImg: Img1,
-  },
-  {
-    slug: "Fitness-Landing",
-    coverImg: Img1,
-  },
-  {
-    slug: "CryptoWorld",
-    coverImg: Img1,
-  },
-  {
-    slug: "Modern-Bank-Landing",
-    coverImg: Img1,
-  },
-  {
-    slug: "Last-Portfolio",
-    coverImg: Img1,
-  },
-];
+import Github from "./GithubChart.js";
+import projects from "./projects.json"
+
 
 const Portfolio = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
   return (
-    <section id="portfolio" className="portfolio">  
+    <section id="portfolio" className="portfolio">
       <Container fluid className="about-section">
         <Container>
           <h2 className="project-heading">
@@ -78,13 +42,16 @@ const Portfolio = () => {
           </Tilt>
         ))}
       </section>
-      <div className="github_image"> 
-      <h2 className="project-heading" style={{ paddingBottom: "20px" }}>
-        Days I <strong className="purple">Code</strong>
-      </h2>
-        <img src="https://raw.githubusercontent.com/joseph8884/joseph8884/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
+      <div className="github_image">
+        <h2 className="project-heading" style={{ paddingBottom: "20px" }}>
+          Days I <strong className="purple">Code</strong>
+        </h2>
+        <img
+          src="https://raw.githubusercontent.com/joseph8884/joseph8884/output/github-contribution-grid-snake-dark.svg"
+          alt="Snake animation"
+        />
       </div>
-          </section>
+    </section>
   );
 };
 
