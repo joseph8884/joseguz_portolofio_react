@@ -6,7 +6,6 @@ import Tilt from "react-parallax-tilt";
 import Techstack from "./Techstack.js";
 import { Container } from "react-bootstrap";
 import Toolstack from "./Toolstack.js";
-import Github from "./GithubChart.js";
 import projects from "./projects.json"
 
 
@@ -32,13 +31,11 @@ const Portfolio = () => {
         {projects.map((item, i) => (
           <Tilt
             key={i}
-            scale="1.1"
+            scale="1"
             transitionSpeed={5000}
             className="portfolio_item"
           >
-            <a href={`/projects/${item.slug}`}>
               <img src={item.coverImg} alt={item.slug} className="imagen" />
-            </a>
           </Tilt>
         ))}
       </section>

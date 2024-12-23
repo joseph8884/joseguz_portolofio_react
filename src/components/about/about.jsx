@@ -4,6 +4,7 @@ import { FiUsers } from "react-icons/fi";
 import ME from "../../assets/profile_photo_jose.jpg";
 import React from "react";
 import "./about.css";
+import Achivments from "./Achivments";
 
 function About() {
   return (
@@ -22,31 +23,35 @@ function About() {
             <article className="about_card">
               <FaAward className="about_icon" />
               <h5>Experience</h5>
-              <small>3+ Years Working</small>
+              <small>2+ Years Working</small>
             </article>
             <article className="about_card">
               <FiUsers className="about_icon" />
               <h5>Clients</h5>
-              <small>200+ Clients</small>
+              <small>4+ Clients</small>
             </article>
             <article className="about_card">
               <VscFolderLibrary className="about_icon" />
               <h5>Projects</h5>
-              <small>80+ Completed</small>
+              <small>20+ Completed</small>
             </article>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-            repellendus dicta aperiam asperiores quis est ipsum sint velit
-            beatae voluptatum cupiditate unde, facilis itaque ab cum non,
-            commodi quam blanditiis!
+            Hello world, I am Jose Guzman, I am a software engenieer
+            /business owner and resercher on my free time. I love 
+            learn new topics and gain new experiences. I also like to put
+            i consider myself as discipline person, who loves what he does 
+            with tech career, Im in the jurning to learn what i am best for.
+            For that reason we create <a href="https://webelopers.io"> Webelopers</a>
+            I would love to bring my value to the world, in a world that everyday is 
+            changing and improving in tecnology. 
           </p>
           <a href="#contact" className="btn btn-primary">
             Let's Talk
           </a>
         </div>
       </div>
-      Poner achivments
+      <Achivments/>
     </section>
   );
 }
