@@ -1,4 +1,4 @@
-const Achivments = () => {
+const Achievements = () => {
     return (
         <section class="about-section section" id="about">
             <div class="container">
@@ -7,85 +7,72 @@ const Achivments = () => {
                         <div class="row">
                             <div class="timeline">
                                 <div class="row">
-
                                     <div class="timeline-item">
                                         <div class="timeline-item-inner outer-shadow">
                                             <i class="fas fa-star icon"></i>
-                                            <span>Julio 2023</span>
-                                            <h3>Webelopers</h3>
-                                            <p>Fundamos Webelopers durante nuestro cuarto semestre de ingeniería informática, canalizando
-                                                nuestra pasión por la tecnología en una empresa B2B innovadora. Nos enfocamos en transformar la
-                                                relación entre las empresas y la tecnología, ofreciendo soluciones digitales personalizadas y
-                                                eficientes.</p>
+                                            <span>January 2022</span>
+                                            <h3>Starting My Computer Engineering Journey</h3>
+                                            <p>I began my studies in Computer Engineering at Universidad de La Sabana, 
+                                                Chía, Cundinamarca. During this time, I gained foundational knowledge in 
+                                                programming and logical problem-solving.
+                                            </p>
                                         </div>
                                     </div>
-
                                     <div class="timeline-item">
                                         <div class="timeline-item-inner outer-shadow">
                                             <i class="fas fa-briefcase icon"></i>
-                                            <span>Septiembre - Octubre 2023</span>
-                                            <h3>Colegio La Fuente</h3>
-                                            <p>Desarrollamos una plataforma web interactiva para el Colegio La Fuente, revitalizando la conexión
-                                                entre exalumnos. Nuestro diseño intuitivo y funcionalidades innovadoras lograron un aumento
-                                                significativo en la participación de graduados, fortaleciendo la comunidad escolar.</p>
+                                            <span>September 2023</span>
+                                            <h3>Co-Founder of Webelopers.io</h3>
+                                            <p>We identified a need for freelance web and mobile application development 
+                                                services targeting small and medium-sized businesses. Our goal was to 
+                                                help companies establish a strong online presence.
+                                            </p>
                                         </div>
                                     </div>
-
                                     <div class="timeline-item">
                                         <div class="timeline-item-inner outer-shadow">
                                             <i class="fas fa-briefcase icon"></i>
-                                            <span>Agosto - Noviembre 2023</span>
-                                            <h3>Sport Bar Panda FC</h3>
-                                            <p>Creamos una interfaz web intuitiva para el menú de Sport Bar Panda FC, mejorando
-                                                significativamente la experiencia del cliente. Nuestra solución optimizó la eficiencia del
-                                                servicio, permitiendo a los clientes disfrutar más de la comida y los eventos deportivos.</p>
+                                            <span>July 2024</span>
+                                            <h3>Sabana Herons - RoboCup 2024</h3>
+                                            <p>Along with my Applied Robotics research team, I participated in the RoboCup 
+                                                2024 in Eindhoven, Netherlands, competing in the Standard Platform League 
+                                                with NAO robots. After over six months of preparation, we proudly reached the semifinals.
+                                            </p>
                                         </div>
                                     </div>
-
                                     <div class="timeline-item">
                                         <div class="timeline-item-inner outer-shadow">
                                             <i class="fas fa-briefcase icon"></i>
-                                            <span>Febrero - Abril 2024</span>
-                                            <h3>Ferretería JF</h3>
-                                            <p>Implementamos una aplicación web integral para Ferretería JF, incluyendo gestión de inventario,
-                                                catálogo digital y plataforma de ventas en línea. Nuestro sistema optimizó los procesos, impulsó
-                                                las ventas y fortaleció la presencia digital de la ferretería en el mercado.</p>
+                                            <span>August 2024</span>
+                                            <h3>President of IEEE RAS Chapter</h3>
+                                            <p>I was elected as President of the IEEE Robotics and Automation Society 
+                                                Student Chapter at Universidad de La Sabana, where I led research 
+                                                and technology development initiatives for the student community.
+                                            </p>
                                         </div>
                                     </div>
-
                                     <div class="timeline-item">
                                         <div class="timeline-item-inner outer-shadow">
                                             <i class="fas fa-briefcase icon"></i>
-                                            <span>Mayo 2024</span>
-                                            <h3>Rut bodas y fiestas</h3>
-                                            <p>Diseñamos una landing page efectiva para Rut bodas y fiestas, destacando sus servicios y
-                                                atrayendo clientes potenciales. Nuestro enfoque en el diseño y la experiencia del usuario ayudó a
-                                                aumentar la visibilidad online de la empresa.</p>
+                                            <span>September 2024</span>
+                                            <h3>Parcero BOT - AI Challenge Winner</h3>
+                                            <p>We won Universidad de La Sabana's AI Challenge by creating an integrated 
+                                                portal with a ChatGPT-style bot. This tool allowed students to ask questions 
+                                                related to the university and receive automated, accurate responses.
+                                            </p>
                                         </div>
                                     </div>
-
                                     <div class="timeline-item">
                                         <div class="timeline-item-inner outer-shadow">
                                             <i class="fas fa-briefcase icon"></i>
-                                            <span>Agosto 2024</span>
-                                            <h3>AVGI Group</h3>
-                                            <p>Creamos una landing page atractiva para AVGI Group y desarrollamos un sistema LMS para la
-                                                capacitación de sus clientes. Nuestra solución integral mejoró la presencia online de la empresa y
-                                                facilitó el aprendizaje de sus servicios de manera eficiente.</p>
+                                            <span>November 2024</span>
+                                            <h3>Winners of Sabana Hack</h3>
+                                            <p>During Sabana Hack, a collaborative event uniting students and companies 
+                                                to solve real-world problems, we won first place. Our solution leveraged 
+                                                artificial intelligence, IoT, and cloud architecture for the National Cancer Institute.
+                                            </p>
                                         </div>
                                     </div>
-
-                                    <div class="timeline-item">
-                                        <div class="timeline-item-inner outer-shadow">
-                                            <i class="fas fa-briefcase icon"></i>
-                                            <span>Agosto 2024</span>
-                                            <h3>Profesores extranjeros</h3>
-                                            <p>Desarrollamos un sistema de gestión para profesores extranjeros, estandarizando la administración
-                                                de horas laborales y automatizando la generación de informes. Nuestra solución mejoró la
-                                                eficiencia administrativa y la gestión de recursos humanos.</p>
-                                        </div>
-                                    </div>
-
                                 </div>
                             </div>
                         </div>
@@ -95,4 +82,4 @@ const Achivments = () => {
         </section>
     )
 };
-export default Achivments
+export default Achievements;

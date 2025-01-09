@@ -52,6 +52,7 @@ function About() {
         </div>
       </div>
       <Achivments/>
+      hacer blog
     </section>
   );
 }
