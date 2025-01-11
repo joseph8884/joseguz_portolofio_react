@@ -1,15 +1,20 @@
-import Img1 from "../../assets/b1.jpg";
-  
-import React from "react";
+import React, { useState } from "react";
 import "./portfolio.css";
 import Tilt from "react-parallax-tilt";
 import Techstack from "./Techstack.js";
 import { Container } from "react-bootstrap";
 import Toolstack from "./Toolstack.js";
-import projects from "./projects.json"
-
+import projects from "./projects.json";
+import Dialog from "./Dialog.js";
 
 const Portfolio = () => {
+  const [open, setOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleClickOpen = (project) => {
+    setSelectedProject(project);
+    setOpen(true);
+  };
   return (
     <section id="portfolio" className="portfolio">
       <Container fluid className="about-section">
@@ -35,9 +40,15 @@ const Portfolio = () => {
             transitionSpeed={5000}
             className="portfolio_item"
           >
-              <img src={item.coverImg} alt={item.slug} className="imagen" />
+            <img src={item.coverImg} alt={item.slug} className="imagen" onClick={() => handleClickOpen(item)} />
           </Tilt>
         ))}
+        <Dialog
+          open={open}
+          setOpen={setOpen}
+          selectedProject={selectedProject}
+          setSelectedProject={setSelectedProject}
+        />
       </section>
       <div className="github_image">
         <h2 className="project-heading" style={{ paddingBottom: "20px" }}>

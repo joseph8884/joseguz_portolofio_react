@@ -6,24 +6,16 @@ import "./footer.css";
 const Footer = () => {
   return (
     <footer>
-      <a href="/#" className="footer_logo">
-        OMEGA
-      </a>
-
-      <div className="footer_socials">
-        <a href="www.linkedin.com">
-          <BsLinkedin />
-        </a>
-        <a href="www.github.com">
-          <BsGithub />
-        </a>
-        <a href="www.figma.com">
-          <FaFigma />
-        </a>
-      </div>
-      <div className="footer_copyright">
-        <small>&copy; OMEGA. All right reserved</small>
-      </div>
+      <center>
+        <hr class="my-3 border-gray-400 opacity-15 sm:mx-auto lg:my-6 text-center" />
+        <span class="block text-sm pb-4 text-gray-500 text-center dark:text-gray-400">
+          © 2025{" "}
+          <a href="https://flowbite.com/" class="hover:underline">
+            Jose Guzman Montaño™
+          </a>
+          . All Rights Reserved.
+        </span>
+      </center>
     </footer>
   );
 };
