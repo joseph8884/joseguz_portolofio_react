@@ -5,8 +5,12 @@ import ME from "../../assets/profile_photo_jose.jpg";
 import React from "react";
 import "./about.css";
 import Achivments from "./Achivments";
+import firebaseManage from "../../Firebase/firebase_manage";
 
 function About() {
+  const sendMessage = () => { 
+    firebaseManage.addComentToDB("Jose", "Hello world");
+  }
   return (
     <section id="about">
       <h5>Get to Know</h5>
@@ -52,7 +56,7 @@ function About() {
         </div>
       </div>
       <Achivments/>
-      hacer blog
+      <button onClick={()=>sendMessage()}>click</button>
     </section>
   );
 }

@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.12.4",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.4.0",
     "@splinetool/react-spline": "^4.0.0",
     "@splinetool/runtime": "^1.9.28",
     "@testing-library/jest-dom": "^5.16.4",
@@ -12,6 +14,7 @@
     "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",
     "emailjs-com": "^3.2.0",
+    "firebase": "^11.2.0",
     "framer-motion": "^11.11.7",
     "nth-check": ">=2.0.1",
     "react": "^18.1.0",

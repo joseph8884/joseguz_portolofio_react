@@ -8,6 +8,7 @@ import About from "./components/about/about";
 import Nav from "./components/nav/nav";
 import Preloader from "./components/pre";
 import "tailwindcss/tailwind.css";
+import "./Firebase/intialize"
 
 const App = () => {
   const [load, updateLoad] = useState(true);

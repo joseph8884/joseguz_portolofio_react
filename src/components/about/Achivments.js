@@ -1,7 +1,7 @@
 const Achievements = () => {
     return (
-        <section class="about-section section" id="about">
-            <div class="container">
+        <section className="about-section section" id="about">
+            <div className="container">
                 <div class="row">
                     <div class="experience tab-content active">
                         <div class="row">
