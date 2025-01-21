@@ -7,7 +7,7 @@
      width: 100%;
      aspect-ratio: 1/1;
      border-radius: 2rem;
-     height: 100%;
+     height: 520px;
      background-image: linear-gradient(
          45deg,
          transparent,
@@ -21,7 +21,7 @@
  .about_me-image{
      border-radius: 2rem;
      overflow: hidden;
-     height: 100%;
+     height: 520px;
      transform: rotate(10deg);
      transition: var(--transition);
  }
@@ -257,3 +257,170 @@
 		right:auto;
 	}
 }
+
+
+/*---------------------------Comments-----------------------------------------------------*/
+/* General container styling */
+.comments-container {
+    background-color: #1e1e1e;
+    color: white;
+    min-height: 80vh;
+    max-height: 90vh;
+    margin: 0 15% 0 15%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+    justify-content: space-evenly;
+  }
+  
+  /* Form Section */
+  .comment-form {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .comment-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+  
+  .required {
+    color: red;
+  }
+  
+  .form-input {
+    background-color: #2c2c2c;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.9rem;
+    outline: none;
+  }
+  
+  .form-input:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 5px #8b5cf6;
+  }
+  
+  .form-file {
+    color: #ddd;
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+  
+  .post-btn {
+    background-color: #8b5cf6;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .post-btn:hover {
+    background-color: #7c3aed;
+  }
+  
+  /* Comments List Section */
+  .comentslist-container {
+    gap: 20px;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-color: #8b5cf6 #1e1e1e;
+  }
+  .comments-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .comment-item {
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .comment-photo {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #2c2c2c;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .photo-placeholder {
+    color: #777;
+    font-size: 0.8rem;
+  }
+  
+  .comment-details {
+    flex-grow: 1;
+    width: 50%;
+  }
+  
+  .comment-name {
+    font-weight: bold;
+    font-size: 1rem;
+    word-wrap: break-word; /* Ensure long words break and wrap to the next line */
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+  
+  .comment-date {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 5px;
+  }
+  
+  .comment-text {
+    font-size: 0.9rem;
+    color: #ddd;
+
+    width: 100%;
+    word-wrap: break-word; /* Ensure long words break and wrap to the next line */
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+  

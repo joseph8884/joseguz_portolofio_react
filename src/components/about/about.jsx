@@ -5,6 +5,7 @@ import ME from "../../assets/profile_photo_jose.jpg";
 import React from "react";
 import "./about.css";
 import Achivments from "./Achivments";
+import Comments from "./Comments";
 import firebaseManage from "../../Firebase/firebase_manage";
 
 function About() {
@@ -56,7 +57,7 @@ function About() {
         </div>
       </div>
       <Achivments/>
-      <button onClick={()=>sendMessage()}>click</button>
+      <Comments/>
     </section>
   );
 }
