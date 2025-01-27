@@ -9,6 +9,7 @@ import Nav from "./components/nav/nav";
 import Preloader from "./components/pre";
 import "tailwindcss/tailwind.css";
 import "./Firebase/intialize"
+import FloatButton from "./components/nav/FloatButton";
 
 const App = () => {
   const [load, updateLoad] = useState(true);
@@ -24,6 +25,7 @@ const App = () => {
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <FloatButton/>
         <Nav />
         <Routes>
           <Route path="/" element={<><Header /></>} />

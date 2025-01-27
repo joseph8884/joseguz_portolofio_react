@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import firebaseManage from "../../Firebase/firebase_manage";
 
 const Comments = () => {
   const [comments, setComments] = useState([]);
@@ -6,22 +7,38 @@ const Comments = () => {
   const [message, setMessage] = useState("");
   const [profilePhoto, setProfilePhoto] = useState(null);
 
+  useEffect(() => {
+    const fetchComments = async () => {
+      const fetchedComments = await firebaseManage.getCommentsFromDB();
+      setComments(fetchedComments);
+    };
+
+    fetchComments();
+  }, []);
+
   const handlePhotoUpload = (e) => {
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onload = () => {
-        setProfilePhoto(reader.result);
+        setProfilePhoto({ file, preview: reader.result });
       };
       reader.readAsDataURL(file);
     }
   };
 
-  const handlePostComment = () => {
+  const handlePostComment = async () => {
     if (name && message) {
+      let photoURL = null;
+      if (profilePhoto) {
+        const uniqueFileName = `${Date.now()}_${profilePhoto.file.name}`;
+        photoURL = await firebaseManage.uploadImageToStorage(uniqueFileName, profilePhoto.file);
+      }
+
+      await firebaseManage.addComentToDB(name, message, photoURL);
       setComments([
         ...comments,
-        { name, message, profilePhoto, date: new Date().toLocaleDateString() },
+        { name, message, photoURL: photoURL, timestamp: new Date().toLocaleDateString() },
       ]);
       setName("");
       setMessage("");
@@ -82,19 +99,21 @@ const Comments = () => {
         {comments.map((comment, index) => (
           <div key={index} className="comment-item">
             <div className="comment-photo">
-              {comment.profilePhoto ? (
+              {comment.photoURL ? (
                 <img
-                  src={comment.profilePhoto}
+                  src={comment.photoURL}
                   alt="Profile"
                   className="photo"
                 />
               ) : (
+
+                
                 <div className="photo-placeholder">No Photo</div>
               )}
             </div>
             <div className="comment-details">
               <h4 className="comment-name">{comment.name}</h4>
-              <p className="comment-date">{comment.date}</p>
+              <p className="comment-date">{comment.timestamp}</p>
               <p className="comment-text">{comment.message}</p>
             </div>
           </div>

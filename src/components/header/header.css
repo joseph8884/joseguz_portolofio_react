@@ -18,7 +18,7 @@ header{
     "section_me photo_me" auto
     "cta photo_me" 50px
     "header_social photo_me" auto/
-    40% 60%; /* rows y arriba son las columnas*/
+    30% 70%; /* rows y arriba son las columnas*/
     & section{
         grid-area: section_me;
     }
@@ -84,40 +84,6 @@ header{
     /*border-radius: 15rem 15rem 15rem 15rem ;*/
 
 }
-
-/* ============= FLIP CARD STYLES ============== */
-/*
-.cartas-container {
-  perspective: 1000px;
-}
-
-.flip-card {
-  background-color: transparent;
-  width: 100%;
-  perspective: 1000px;
-}
-
-.flip-card-inner {
-  position: relative;
-  transition: transform 1000ms;
-  transform-style: preserve-3d;
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  backface-visibility: hidden;
-}
-
-.flip-card-back {
-  transform: rotateY(180deg);
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-  */
 /* ================ wave hand ============= */
 .wave {
     animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
