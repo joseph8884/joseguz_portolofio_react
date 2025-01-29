@@ -23,15 +23,14 @@ const App = () => {
 
   return (
     <Router>
-      <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <FloatButton/>
         <Nav />
         <Routes>
           <Route path="/" element={<><Header /></>} />
-          <Route path="/about" element={<><About /><Footer /></>} />
-          <Route path="/portfolio" element={<><Portfolio /><Footer /></>} />
-          <Route path="/contact" element={<><Contact /><Footer /></>} />
+          <Route path="/about" element={<><Footer /><About /></>} />
+          <Route path="/portfolio" element={<><Footer /><Portfolio /></>} />
+          <Route path="/contact" element={<><Footer /><Contact /></>} />
         </Routes>
       </div>
     </Router>

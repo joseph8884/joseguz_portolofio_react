@@ -6,10 +6,17 @@ import { BiUser } from "react-icons/bi";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./nav.css";
+import { useState } from "react";
 
 function Nav() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <nav>
+    <>
+      <nav>
       <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
         <AiOutlineHome />
       </NavLink>
@@ -23,6 +30,8 @@ function Nav() {
         <BiMessageDetail />
       </NavLink>
     </nav>
+    </>
+    
   );
 }
 

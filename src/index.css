@@ -1,8 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 *{
     margin: 0%;
@@ -123,18 +118,22 @@ a:hover{
     .container{
         width: var(--container-width-md);
     }
-    section{
-        margin-top: 6rem;
-    }
 }
 
 /* ============= MEDIA QUERIES (SMALL DEVICES) ============== */
 @media screen and (max-width: 600px) {
-    
-    .container{
-        width: var(--container-width-sm);
-    }
-    section h2{
-        margin-bottom: 2rem;
+    .header_container{
+        display: grid;
+        width: 100%;    
+        grid-template: 
+        "photo_me" 100vh
+        "section_me " auto
+        "cta" auto
+        "header_social" auto/
+        auto; /* rows y arriba son las columnas*/
     }
 }
+/* HTML: <div class="loader"></div> */
+  @keyframes l7 {
+    to {background-position: 150% 0%}
+  }

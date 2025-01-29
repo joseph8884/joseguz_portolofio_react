@@ -1,7 +1,5 @@
-import { BsLinkedin, BsGithub } from "react-icons/bs";
-import { FaFigma } from "react-icons/fa";
+
 import React from "react";
-import "./footer.css";
 
 const Footer = () => {
   return (

@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import firebaseManage from "../../Firebase/firebase_manage";
+import ThreeDLoaderComponent from "../pre";
 
 const Comments = () => {
   const [comments, setComments] = useState([]);
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [profilePhoto, setProfilePhoto] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchComments = async () => {
@@ -29,6 +31,7 @@ const Comments = () => {
 
   const handlePostComment = async () => {
     if (name && message) {
+      setLoading(true);
       let photoURL = null;
       if (profilePhoto) {
         const uniqueFileName = `${Date.now()}_${profilePhoto.file.name}`;
@@ -43,12 +46,15 @@ const Comments = () => {
       setName("");
       setMessage("");
       setProfilePhoto(null);
+      setLoading(false);
     } else {
       alert("Please fill in both name and message fields.");
     }
   };
 
   return (
+    <>
+    {loading && <ThreeDLoaderComponent />}
     <div className="comments-container">
       <div className="comment-form">
         <h2 className="comment-title">Comments ({comments.length})</h2>
@@ -122,6 +128,7 @@ const Comments = () => {
       </div>
       
     </div>
+    </>
   );
 };
 
