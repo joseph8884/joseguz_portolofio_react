@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 import { BiMessageDetail } from "react-icons/bi";
-import { AiOutlineHome } from "react-icons/ai";
-import { RiServiceLine } from "react-icons/ri";
-import { BiBriefcase } from "react-icons/bi";
-import { BiUser } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import "./nav.css";
 
@@ -21,7 +17,7 @@ function FloatButton() {
       </button>
       {isOpen && (
         <div className="float-button-options">
-          <NavLink to="/buy-me-a-coffee" className="float-button-option">
+          <NavLink to="https://buymeacoffee.com/joseguzman" target="blank" className="float-button-option">
             Buy me a coffee
           </NavLink>
           <NavLink to="/contact" className="float-button-option">
