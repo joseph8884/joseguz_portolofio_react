@@ -1,19 +1,12 @@
 import { BiMessageDetail } from "react-icons/bi";
 import { AiOutlineHome } from "react-icons/ai";
-import { RiServiceLine } from "react-icons/ri";
 import { BiBriefcase } from "react-icons/bi";
 import { BiUser } from "react-icons/bi";
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./nav.css";
-import { useState } from "react";
-
+import "./nav.css"
 function Nav() {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleNav = () => {
-    setIsOpen(!isOpen);
-  };
   return (
     <>
       <nav>

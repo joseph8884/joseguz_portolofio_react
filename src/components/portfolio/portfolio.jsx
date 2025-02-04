@@ -16,6 +16,7 @@ const Portfolio = () => {
     setOpen(true);
   };
   return (
+    <>
     <section id="portfolio" className="portfolio">
       <Container fluid className="about-section">
         <Container>
@@ -59,7 +60,10 @@ const Portfolio = () => {
           alt="Snake animation"
         />
       </div>
+      <div className="gab">.</div>
     </section>
+    <div className="gab">.</div>
+    </>
   );
 };
 

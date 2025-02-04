@@ -128,6 +128,7 @@ const Comments = () => {
       </div>
       
     </div>
+    <div className="gab">.</div>
     </>
   );
 };

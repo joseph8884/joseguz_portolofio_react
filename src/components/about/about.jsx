@@ -6,12 +6,7 @@ import React from "react";
 import "./about.css";
 import Achivments from "./Achivments";
 import Comments from "./Comments";
-import firebaseManage from "../../Firebase/firebase_manage";
-
 function About() {
-  const sendMessage = () => { 
-    firebaseManage.addComentToDB("Jose", "Hello world");
-  }
   return (
     <section id="about">
       <h5>Get to Know</h5>
@@ -19,9 +14,8 @@ function About() {
 
       <div className="container about_container">
         <div className="about_me">
-          <div className="about_me-image">
+          
             <img src={ME} alt="About Me" />
-          </div>
         </div>
         <div className="about_content">
           <div className="about_cards">

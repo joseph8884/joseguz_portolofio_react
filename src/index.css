@@ -53,7 +53,9 @@ body{
     margin: 0 auto;
     text-align: center;
 }
-
+.gap{
+    margin-top: 100px;
+}
 h1, h2, h3, h4, h5{
     font-size: 500;
 }
@@ -114,24 +116,24 @@ a:hover{
 
 /* ============= MEDIA QUERIES (MIDIUM DEVICES) ============== */
 @media screen and (max-width: 1024px) {
-    
-    .container{
-        width: var(--container-width-md);
-    }
-}
-
-/* ============= MEDIA QUERIES (SMALL DEVICES) ============== */
-@media screen and (max-width: 600px) {
-    .header_container{
-        display: grid;
-        width: 100%;    
+    .header_container{   
         grid-template: 
         "photo_me" 100vh
         "section_me " auto
         "cta" auto
-        "header_social" auto/
-        auto; /* rows y arriba son las columnas*/
+        "header_social" 35%/
+        auto; 
     }
+    
+}
+
+/* ============= MEDIA QUERIES (SMALL DEVICES) ============== */
+@media screen and (max-width: 600px) {
+    .float-button-container {
+        top: 2rem;
+        left: 30px;
+      }
+    
 }
 /* HTML: <div class="loader"></div> */
   @keyframes l7 {

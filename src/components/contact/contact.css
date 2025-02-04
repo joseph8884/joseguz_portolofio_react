@@ -4,6 +4,9 @@
     gap: 12%;
     margin-bottom: 150px;
 }
+.contact{
+    margin-bottom: 20px;
+}
 .contact_options{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -60,7 +63,7 @@ input,textarea{
 
 /* ============= MEDIA QUERIES (SMALL DEVICES) ============== */
 @media screen and (max-width: 600px) {
-    .container.contact_container{
-        width: var(--container-width-sm);
+    .contact_options{
+        grid-template-columns: 1fr;
     }
 }
