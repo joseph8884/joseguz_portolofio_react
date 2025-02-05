@@ -37,8 +37,7 @@
 
 /* ============= MEDIA QUERIES (SMALL DEVICES) ============== */
 @media screen and (max-width: 600px) {
-
-    .portfolio_container .certificates_container{
+    .portfolio_container, .certificates_container{
         grid-template-columns: 1fr;
         gap: 1rem;
     }
@@ -119,15 +118,20 @@
   .tabs-container {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1rem;
+    background-color: rgba(9, 9, 9, 0.3);
+    justify-content: center;
+    max-width: 50%;
+    margin: 0 auto 1rem auto; 
   }
   .tabs-container button {
     padding: 8px 16px;
     border: none;
-    background: #ddd;
     cursor: pointer;
   }
+  .tabs-container button:hover {
+    background-color: rgba(124, 124, 124, 0.356);
+  }
   .tabs-container .active-tab {
-    background: #bbb;
+    background-color: var(--color-primary);
     font-weight: bold;
   }
