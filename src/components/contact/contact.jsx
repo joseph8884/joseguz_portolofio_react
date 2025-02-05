@@ -2,32 +2,34 @@ import { MdOutlineEmail } from "react-icons/md";
 import { BsLinkedin } from "react-icons/bs";
 import { BsWhatsapp } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
-import { useRef } from "react";
-import emailjs from "emailjs-com";
+import { useEffect, useState } from "react";
+import emailjs from 'emailjs-com';
 import React from "react";
 import "./contact.css";
 
 const Contact = () => {
-  const form = useRef();
+  const [ip, setIp] = useState('');
+  const [locationInfo, setLocationInfo] = useState('');
+  const [timeStart] = useState(Date.now());
 
-  const sendEmail = async (e) => {
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition((pos) => {
+      setLocationInfo(`${pos.coords.latitude}, ${pos.coords.longitude}`);
+    });
+    fetch('https://api.ipify.org?format=json')
+      .then((res) => res.json())
+      .then((data) => setIp(data.ip));
+  }, []);
+
+  const handleSubmit = (e) => {
+    const timeSpent = (Date.now() - timeStart) / 1000;
+    // Actualiza el campo hidden con tiempo
+    e.target.elements.timeSpent.value = timeSpent;
+    // Envía el formulario a formsubmit
+    // Prevenimos el envío inmediato para setear tiempoSpent
     e.preventDefault();
-    const ID = process.env;
-
-    try {
-      await emailjs.sendForm(
-        ID.REACT_APP_SERVICE_ID || "",
-        ID.REACT_APP_TEMPLATE_ID || "",
-        form.current,
-        ID.REACT_APP_USER_ID || ""
-      );
-
-      e.target.reset();
-    } catch (error) {
-      alert("Error: Message not delivered!");
-    }
+    e.target.submit();
   };
-
   return (
     <>
     <section id="contact">
@@ -84,24 +86,21 @@ const Contact = () => {
           </article>
         </div>
         {/* =========== eND OF CONTACT OPTIONS =========== */}
-        <form ref={form} onSubmit={sendEmail}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Full Name"
-            required
-          />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea
-            name="message"
-            rows="7"
-            placeholder="Your Message"
-            required
-          ></textarea>
-          <button type="submit" className="btn btn-primary">
-            Send Message
-          </button>
-        </form>
+        <form
+      onSubmit={handleSubmit}
+      action="https://formsubmit.co/fc956266785ff39d6cb9af91241399ba"
+      method="POST"
+    >
+      <input type="text" name="name" placeholder="Your Full Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="7" placeholder="Your Message" required></textarea>
+      <input type="hidden" name="ip" value={ip} />
+      <input type="hidden" name="location" value={locationInfo} />
+      <input type="hidden" name="timeSpent" value="" />
+      <button type="submit" className="btn btn-primary">
+        Send Message
+      </button>
+    </form>
       </div>
     </section>
     <div className="gab">
