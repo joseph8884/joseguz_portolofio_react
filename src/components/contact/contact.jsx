@@ -51,7 +51,7 @@ const Contact = () => {
               <h4>Whatsapp</h4>
               <h5>+57 3052951490</h5>
               <a
-                href="https://api.whatsapp.com/send?phone3052951490"
+                href="https://api.whatsapp.com/send?phone=3052951490"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -73,7 +73,7 @@ const Contact = () => {
               <BsGithub className="contact_option-icon" />
               <h4>GitHub</h4>
               <a
-                href="https://www.linkedin.com/in/héctor-jose-guzmán-montaño-2093a2238/"
+                href="https://api.whatsapp.com/send?phone=3052951490"
                 target="_blank"
                 rel="noreferrer"
               >
