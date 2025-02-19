@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import firebaseManage from "../../Firebase/firebase_manage";
 import ThreeDLoaderComponent from "../pre";
+import { set } from "firebase/database";
 
 const Comments = () => {
   const [comments, setComments] = useState([]);
@@ -10,9 +11,11 @@ const Comments = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true); 
     const fetchComments = async () => {
       const fetchedComments = await firebaseManage.getCommentsFromDB();
       setComments(fetchedComments);
+      setLoading(false);
     };
 
     fetchComments();
@@ -57,7 +60,7 @@ const Comments = () => {
     {loading && <ThreeDLoaderComponent />}
     <div className="comments-container">
       <div className="comment-form">
-        <h2 className="comment-title">Comments ({comments.length})</h2>
+        <h2 className="comment-title">Comments ({comments ? comments.length : "0"})</h2>
         <div className="form-fields">
           <div className="form-group">
             <label htmlFor="name">
@@ -102,7 +105,7 @@ const Comments = () => {
       </div>
       <div className="comentslist-container ">
         <div className="comments-list">
-        {comments.map((comment, index) => (
+        {comments?.map((comment, index) => (
           <div key={index} className="comment-item">
             <div className="comment-photo">
               {comment.photoURL ? (
@@ -112,9 +115,11 @@ const Comments = () => {
                   className="photo"
                 />
               ) : (
-
-                
-                <div className="photo-placeholder">No Photo</div>
+                <img
+                  src={"/22_Profile.jpg"}
+                  alt="Profile"
+                  className="photo"
+                />
               )}
             </div>
             <div className="comment-details">

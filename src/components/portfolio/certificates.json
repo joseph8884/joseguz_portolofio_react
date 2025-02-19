@@ -1,37 +1,37 @@
 [
     {
       "slug": "Certificado React",
-      "coverImg": "/certificates/aws certificate.jpeg",
+      "coverImg": "/Certificates/aws certificate.jpeg",
       "name": "React Certificate",
       "description": "React course completed successfully."
     },
     {
       "slug": "Certificado Django",
-      "coverImg": "/certificates/google data analystic.jpeg",
+      "coverImg": "/Certificates/google data analystic.jpeg",
       "name": "Django Certificate",
       "description": "Django course completed successfully."
     },
     {
       "slug": "Certificado Django",
-      "coverImg": "/certificates/Administracion de sistemas y servicios de infraestructura de TI.jpeg",
+      "coverImg": "/Certificates/Administracion de sistemas y servicios de infraestructura de TI.jpeg",
       "name": "Django Certificate",
       "description": "Django course completed successfully."
     },
     {
       "slug": "Certificado Django",
-      "coverImg": "/certificates/Ibm backend development.jpeg",
+      "coverImg": "/Certificates/Ibm backend development.jpeg",
       "name": "Django Certificate",
       "description": "Django course completed successfully."
     },     
     {
       "slug": "Certificado Django",
-      "coverImg": "/certificates/cisco networking essential.png",
+      "coverImg": "/Certificates/cisco networking essential.png",
       "name": "Django Certificate",
       "description": "Django course completed successfully."
     },
     {
       "slug": "Certificado Django",
-      "coverImg": "/certificates/Ibm aplied fundamentals.png",
+      "coverImg": "/Certificates/Ibm aplied fundamentals.png",
       "name": "Django Certificate",
       "description": "Django course completed successfully."
     }

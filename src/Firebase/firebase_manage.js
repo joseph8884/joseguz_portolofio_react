@@ -12,7 +12,6 @@ const addComentToDB = async (name, message, photoURL) => {
             photoURL: photoURL,
             timestamp: new Date().toISOString()
         });
-        console.log("Document written with ID: ", newCommentRef.key);
     } catch (e) {
         console.error("Error adding document: ", e);
     }
@@ -29,7 +28,6 @@ const getCommentsFromDB = async () => {
             });
             return comments;
         } else {
-            console.log("No data available");
             return [];
         }
     } catch (e) {

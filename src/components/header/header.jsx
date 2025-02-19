@@ -27,8 +27,8 @@ function Header() {
 
         <div className="cta">
           <a
-            href="/resume_url"
-            download={"resume"}
+            href="/Cv JOSE GUZMAN.pdf"
+            download={"CV JOSE GUZMAN ENGLISH"}
             target="_blank"
             className="btn"
           >
