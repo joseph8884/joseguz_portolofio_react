@@ -53,9 +53,6 @@ function Header() {
           >
             <BsGithub />
           </a>
-          <a href="http://figma.com" target="_blank" rel="noreferrer">
-            <FaFigma />
-          </a>
         </div>
       </div>
     </header>
