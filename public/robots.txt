@@ -1,3 +1,17 @@
-# https://www.robotstxt.org/robotstxt.html
+# https://joseguz-portolofio-react.onrender.com
 User-agent: *
-Disallow:
+Allow: /
+Allow: /about
+Allow: /portfolio
+Allow: /contact
+Allow: /experience
+Allow: /skills
+
+# Sitemaps
+Sitemap: https://joseguz-portolofio-react.onrender.com/sitemap.xml
+
+# Assets and system files
+Disallow: /assets/
+Disallow: /*.json$
+Disallow: /*.js$
+Disallow: /*.css$

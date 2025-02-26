@@ -8,17 +8,16 @@ import Spline from "@splinetool/react-spline";
 
 function Header() {
   return (
-    <header id="home">
-      <div className="header_container">
-        <section className="whoami">
-          <h5>
-            Hello I'm
-            <span className="wave" role="img" aria-labelledby="wave">
+    <header id="home" role="banner">
+      <main className="header_container">
+        <section className="whoami" aria-label="Introduction">
+          <h1>
+            <span className="greeting">Hello I'm  <span className="wave" role="img" aria-labelledby="wave">
               👋🏻
-            </span>
-          </h5>
-          <h1>JOSE GUZMAN</h1>
-          <Type />
+            </span></span>
+            <span className="name">JOSE GUZMAN</span>
+          </h1>
+          <Type aria-label="Role description" />
         </section>
 
         <div className="me">
@@ -54,7 +53,7 @@ function Header() {
             <BsGithub />
           </a>
         </div>
-      </div>
+      </main>
     </header>
   );
 }
