@@ -7,8 +7,6 @@ Allow: /contact
 Allow: /experience
 Allow: /skills
 
-# Sitemaps
-Sitemap: https://joseguz-portolofio-react.onrender.com/sitemap.xml
 
 # Assets and system files
 Disallow: /assets/
