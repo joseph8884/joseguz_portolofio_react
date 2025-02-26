@@ -82,7 +82,7 @@ const Portfolio = () => {
                 transitionSpeed={5000}
                 className="portfolio_item"
               >
-                <img src={cert.coverImg} alt={cert.slug} className="imagen" />
+                <img src={cert.coverImg} alt={cert.slug} className="imagen" onClick={()=>window.location.href=cert.coverImg}/>
               </Tilt>
             ))}
           </section>

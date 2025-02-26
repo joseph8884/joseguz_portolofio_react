@@ -1,70 +1,116 @@
-
 [
-    {
-      "slug": "Android app Conex",
-      "coverImg": "/Conex/thumb_pry8_conexapp.png",
-      "name": "App Conex",
-      "img": "/Conex/large_pry_concex.png",
-      "type": "Mobile andrioid Application",
-      "description":
-        "Conex es una aplicación Android que demuestra nuestras habilidades en desarrollo móvil. Integra funciones clave como Bluetooth, cámara, geolocalización y mensajería, además de un sistema de notificaciones. Este proyecto muestra nuestra capacidad para crear apps móviles completas y funcionales.",
-      "technologies": ["Kotlin", "Firebase", "Google Maps API", "Google Cloud Platform", "Android Studio"],
-      "role": "Developer/Lead",
-      "year": "Marzo 2024 - Mayo 2024"
-    },
-    {
-        "slug": "Profesores extranjeros - Web Application",
-        "coverImg": "/Profesores/thumb_profesores.png",
-        "name": "Profesores Extranjeros - Aplicación Web de Control de Horas",
-        "type": "Web Application",
-        "description":
-          "A web application to manage working hours for foreign teachers.",
-        "technologies": ["Django", "React", "PostgreSQL"],
-        "role": "Developer",
-        "year": 2024
-      },
-    {
-      "slug": "Webelopers",
-      "coverImg": "/Webelopers/thumb_webelopers.png",
-      "name": "Own Business Webelopers",
-      "type": "Web Development",
-      "description":
-        "Development and maintenance of a web platform for [specific business purpose].",
-      "technologies": ["HTML", "CSS", "JavaScript"],
-      "role": "Founder/Developer",
-      "year": 2023
-    },
-    {
-      "slug": "Sabana Herons - RoboCup",
-      "coverImg": "/Robocup/thumb_robocup.png",
-      "name": "RoboCup Code of Participation",
-      "type": "Programming Challenge",
-      "description":
-        "Code implementation and participation guidelines for RoboCup competition.",
-      "technologies": ["Python", "ROS", "AI"],
-      "role": "Team Member",
-      "year": 2024
-    },
-    {
-      "slug": "Event Driven Architecture with Microservices",
-      "coverImg": "/EventDriven/thumb.png",
-      "name": "Arquitectura Event Driven con Microservicios",
-      "type": "Software Architecture",
-      "description":
-        "Development of event-driven architecture using microservices for scalable applications.",
-      "technologies": ["Kafka", "Docker", "Java"],
-      "role": "Architect/Developer",
-      "year": 2024
-    },
-    {
-      "slug": "ChatBot challenge",
-      "coverImg": "/ChatBot/thumb_ChatBot.png",
-      "name": "Profesores Extranjeros - Aplicación Web de Control de Horas",
-      "type": "Web Application",
-      "description":
-        "A web application to manage working hours for foreign teachers.",
-      "technologies": ["Django", "React", "PostgreSQL"],
-      "role": "Developer",
-      "year": 2024
-    }
+  {
+    "slug": "Android app Conex",
+    "coverImg": "/Conex/thumb_pry8_conexapp.png",
+    "name": "App Conex",
+    "img": "/Conex/large_pry_concex.png",
+    "description": "Conex is an Android application showcasing mobile development skills. It integrates key features such as Bluetooth connectivity, camera access, geolocation services, and messaging capabilities, alongside a comprehensive notification system. This project demonstrates the ability to create complete and functional mobile apps, highlighting experience in developing user-friendly interfaces and robust backend integrations.",
+    "technologies": [
+      "Kotlin",
+      "Firebase",
+      "Google Maps API",
+      "Google Cloud Platform",
+      "Android Studio"
+    ],
+    "role": "Developer/Lead",
+    "year": "March 2024 - May 2024"
+  },
+  {
+    "slug": "Profesores extranjeros - Web Application",
+    "coverImg": "/Profesores/thumb_profesores.png",
+    "name": "Profesores Extranjeros - Web Application for Time Tracking",
+    "img": "/Profesores/thumb_profesores.png",
+    "description": "Developed a web application for time tracking as a freelancer for a Colombian company, Profesores Extranjeros. This project involved full-stack development, including design and testing. Featuring administrative and professor roles, the application has streamlined the company's tracking of worked hours and automated monthly payroll processing, significantly improving operational efficiency and accuracy.",
+    "technologies": [
+      "SQL",
+      "React/Tailwind",
+      "Spring boot",
+      "Hostinger",
+      "JWT"
+    ],
+    "role": "Developer/Product Manager",
+    "year": 2024
+  },
+  {
+    "slug": "Webelopers",
+    "coverImg": "/Webelopers/thumb_webelopers.png",
+    "name": "Own Business Webelopers",
+    "img": "/Webelopers/large webelopers.png",
+    "description": "Co-founded Webelopers, a web and mobile development company, with three partners. We deliver cutting-edge technology solutions to optimize processes and drive growth in the digital era. Our projects range from websites to mobile applications, utilizing technologies such as HTML, CSS, JavaScript, React, Node.js, MongoDB, Firebase, and Spring Boot. As a technology partner, we empower organizations to thrive through innovative solutions.",
+    "technologies": [
+      "AI",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Firebase",
+      "Spring boot",
+      "SQL"
+    ],
+    "role": "Founder/Developer",
+    "year": 2023
+  },
+  {
+    "slug": "Sabana Herons - RoboCup",
+    "coverImg": "/Robocup/thumb_robocup.png",
+    "name": "RoboCup Code of Participation",
+    "img": "/Robocup/large_ROBOCUP2.webp",
+    "description": "Participated as a team member of Sabana Herons, representing Universidad de la Sabana at RoboCup 2024 in Eindhoven, Netherlands. Competed in the Standard Platform League (SPL) using NAO robots, contributing to the development and implementation of AI-driven robotic solutions.",
+    "technologies": [
+      "Python",
+      "ROS",
+      "AI",
+      "C++",
+      "C"
+    ],
+    "role": "Team Member",
+    "year": 2024
+  },
+  {
+    "slug": "Event Driven Architecture with Microservices Kubernetes",
+    "coverImg": "/EventDriven/thumb.png",
+    "name": "Event-Driven Architecture with Microservices",
+    "type": "Software Architecture",
+    "description": "Developed an event-driven architecture using microservices for scalable applications, leveraging Kubernetes for container orchestration. This system sends email notifications and provides financial advice to assist individuals with bank transactions, demonstrating expertise in designing robust, scalable, and event-driven systems.",
+    "technologies": [
+      "Docker",
+      "Java",
+      "Spring boot",
+      "kubernetes",
+      "RaBBITMQ",
+      "MongoDB",
+      "Jenkins CI/CD",
+      "Digital Ocean"
+    ],
+    "role": "Architect/Developer/DevOps",
+    "year": 2024
+  },
+  {
+    "slug": "ChatBot challenge",
+    "coverImg": "/ChatBot/thumb_ChatBot.png",
+    "name": "ChatBot Challenge",
+    "img": "/ChatBot/thumb_ChatBot.png",
+    "description": "Won a competition for implementing a chatbot to enhance the student experience by providing information about the university. Our chatbot excelled in recommending tasks, activities, and professors, functioning as a virtual assistant and improving student engagement and access to resources.",
+    "technologies": [
+      "React",
+      "AI",
+      "Machine Learning"
+    ],
+    "role": "Developer/Participant",
+    "year": 2024
+  },
+  {
+    "slug": "Resume generator",
+    "coverImg": "/make/resume generator.png",
+    "name": "Resume Generator with Make.com",
+    "img": "/make/Large_resume_generator.png",
+    "description": "Developed an automation to generate resumes based on specific job offers. This application uses AI to recommend the best skills and experiences to highlight, integrating with Google Drive to generate a PDF file. Showcases skills in AI-driven automation and document generation.",
+    "technologies": [
+      "AI",
+      "Google Cloud Platform",
+      "Google drive credential",
+      "Generative AI"
+    ],
+    "role": "Automation Developer",
+    "year": 2024
+  }
 ]

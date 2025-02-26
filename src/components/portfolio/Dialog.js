@@ -12,7 +12,7 @@ const Portfolio = ({open, setOpen,selectedProject, setSelectedProject}) => {
     setSelectedProject(null);
   };
   return (
-        <Dialog open={open} onClose={handleClose}>
+        <Dialog open={open} onClose={handleClose} className="bg-dark text-light">
           {selectedProject && (
             <>
               <DialogTitle>{selectedProject.name}</DialogTitle>
