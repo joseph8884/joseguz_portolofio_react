@@ -10,11 +10,17 @@ import certificates from "./certificates.json";
 const Portfolio = () => {
   const [open, setOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [certDialogOpen, setCertDialogOpen] = useState(false);
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
   const [activeTab, setActiveTab] = useState("portfolio");
 
   const handleClickOpen = (project) => {
     setSelectedProject(project);
     setOpen(true);
+  };
+  const handleCertificateOpen = (certificate) => {
+    setSelectedCertificate(certificate);
+    setCertDialogOpen(true);
   };
   return (
     <>
@@ -82,10 +88,30 @@ const Portfolio = () => {
                 transitionSpeed={5000}
                 className="portfolio_item"
               >
-                <img src={cert.coverImg} alt={cert.slug} className="imagen" onClick={()=>window.location.href=cert.coverImg}/>
+                <img 
+                  src={cert.coverImg} 
+                  alt={cert.slug} 
+                  className="imagen" 
+                  onClick={() => handleCertificateOpen(cert)}
+                />
               </Tilt>
             ))}
           </section>
+        )}
+        {/* Certificate Dialog */}
+        {selectedCertificate && (
+          <div className={`certificate-dialog ${certDialogOpen ? 'open' : ''}`}>
+            <div className="certificate-dialog-content">
+              <span className="close-button" onClick={() => setCertDialogOpen(false)}>
+                &times;
+              </span>
+              <img
+                src={selectedCertificate.coverImg}
+                alt={selectedCertificate.slug}
+                className="certificate-fullsize"
+              />
+            </div>
+          </div>
         )}
         <div className="github_image">
           <h2 className="project-heading" style={{ paddingBottom: "20px" }}>
