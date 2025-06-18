@@ -34,5 +34,11 @@
       "coverImg": "/Certificates/Ibm aplied fundamentals.png",
       "name": "Django Certificate",
       "description": "Django course completed successfully."
+    },
+    {
+      "slug": "AWS cloud practitioner",
+      "coverImg": "/Certificates/aws-certified-cloud-practitioner.png",
+      "name": "AWS Cloud Practitioner",
+      "description": "aws cloud practitioner, it tooks me 3 moths of hard study"
     }
   ]
