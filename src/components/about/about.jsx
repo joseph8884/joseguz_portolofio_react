@@ -27,7 +27,7 @@ function About() {
             <article className="about_card">
               <FiUsers className="about_icon" />
               <h5>Clients</h5>
-              <small>4+ Clients</small>
+              <small>5+ Clients</small>
             </article>
             <article className="about_card">
               <VscFolderLibrary className="about_icon" />
@@ -37,7 +37,7 @@ function About() {
           </div>
           <p>
             Hello world, I am Jose Guzman, I am a software engenieer
-            /business owner and resercher on my free time. I love 
+            /business owner and resercher on my free time. Now i am learing AWS so I can improve my skills, I love
             learn new topics and gain new experiences. I also like to put
             i consider myself as discipline person, who loves what he does 
             with tech career, Im in the jurning to learn what i am best for.
